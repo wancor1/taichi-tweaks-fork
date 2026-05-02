@@ -3,6 +3,8 @@ masa mods addition made for [Taichi SMP](https://discord.gg/6U6Y8c7HQ2).
 
 rework in 1.21.11
 
+I don't know anything about taichi-carpet.
+
 ## Generic
 
 ### autoCollectSelective
