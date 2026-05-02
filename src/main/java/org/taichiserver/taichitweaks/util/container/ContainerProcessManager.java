@@ -37,12 +37,12 @@ public class ContainerProcessManager {
             if (player.isSpectator()) return;
 
             HandledScreen<?> containerScreen = (HandledScreen<?>)screen;
-            if (containerScreen.getScreenHandler() != container || !((AutoProcessableScreen)screen).shouldProcess())
+            if (containerScreen.getScreenHandler() != container || !((AutoProcessableScreen)screen).shouldProcess$TKM())
             {
                 return;
             }
 
-            ((AutoProcessableScreen)screen).setShouldProcess(false);
+            ((AutoProcessableScreen)screen).setShouldProcess$TKM(false);
             List<Slot> allSlots = container.slots;
             List<Slot> playerInvSlots = allSlots.stream().filter(slot -> slot.inventory instanceof PlayerInventory).collect(Collectors.toList());
             if (allSlots.isEmpty() || playerInvSlots.isEmpty())

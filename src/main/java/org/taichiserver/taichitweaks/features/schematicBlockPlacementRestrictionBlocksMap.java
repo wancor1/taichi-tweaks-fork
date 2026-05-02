@@ -13,8 +13,8 @@ public class schematicBlockPlacementRestrictionBlocksMap {
                 .stream()
                 .map(x -> x.split("\s*,\s*"))
                 .map(x -> ImmutableList.of(
-                        Registries.BLOCK.get(new Identifier(x[0])),
-                        Registries.BLOCK.get(new Identifier(x[1]))
+                        Registries.BLOCK.get(Identifier.of(x[0])),
+                        Registries.BLOCK.get(Identifier.of(x[1]))
                 ))
                 .anyMatch(x -> x.get(0) == schematicBlock && x.get(1) == blockToPlace);
     }

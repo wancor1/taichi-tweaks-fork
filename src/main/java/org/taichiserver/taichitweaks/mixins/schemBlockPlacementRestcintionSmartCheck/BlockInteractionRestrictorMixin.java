@@ -5,7 +5,8 @@ import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.Blocks;
 import net.minecraft.entity.player.PlayerEntity;
-import net.minecraft.item.AliasedBlockItem;
+import net.minecraft.item.BlockItem;
+import net.minecraft.block.CropBlock;
 import net.minecraft.item.ShovelItem;
 import net.minecraft.item.HoeItem;
 import net.minecraft.item.Item;
@@ -36,8 +37,9 @@ public class BlockInteractionRestrictorMixin {
             cir.setReturnValue(BlockInteractionRestrictor.Result.good());
         } else if (
                 Blocks.FARMLAND==worldBlock &&
-                Blocks.FARMLAND==schemBlock &&
-                offHandItem instanceof AliasedBlockItem
+                        Blocks.FARMLAND==schemBlock &&
+                        offHandItem instanceof BlockItem blockItem &&
+                        blockItem.getBlock() instanceof CropBlock
         ) {
             cir.setReturnValue(BlockInteractionRestrictor.Result.good());
         } else if (

@@ -18,7 +18,6 @@ import org.taichiserver.taichitweaks.features.AutoVoidTrade;
 @Restriction(require = @Condition(ModIds.itemscroller))
 @Mixin(ClientPlayNetworkHandler.class)
 public abstract class ClientPlayNetworkHandlerMixin {
-    @Shadow private MinecraftClient client;
     @Inject(
             method = "onSetTradeOffers",
             at = @At(
@@ -29,10 +28,11 @@ public abstract class ClientPlayNetworkHandlerMixin {
     )
     private void onSetTradeOffers(CallbackInfo ci) {
         if (!Configs.Generic.AUTO_VOID_TRADE.getBooleanValue()) return;
+        MinecraftClient client = MinecraftClient.getInstance();
         Screen screen = client.currentScreen;
         if (screen instanceof MerchantScreen) {
             AutoVoidTrade.isOpeningScreen = true;
-            AutoVoidTrade.latestChunkPos = this.client.player.getChunkPos();;
+            AutoVoidTrade.latestChunkPos = client.player.getChunkPos();
         }
     }
 }

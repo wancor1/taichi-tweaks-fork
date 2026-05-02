@@ -21,6 +21,7 @@ import fi.dy.masa.malilib.config.IConfigBoolean;
 import fi.dy.masa.minihud.renderer.OverlayRendererBase;
 
 public abstract class BaseBlockRangeOverlay<T extends Block> extends OverlayRendererBase {
+    /*
     protected final IConfigBoolean renderToggleConfig;
     protected final LongOpenHashSet blockPositions = new LongOpenHashSet();
     protected final Block block;
@@ -182,4 +183,5 @@ public abstract class BaseBlockRangeOverlay<T extends Block> extends OverlayRend
     }
 
     protected abstract void renderBlockRange(World world, BlockPos pos, T be, Vec3d cameraPos);
+    */
 }

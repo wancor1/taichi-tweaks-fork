@@ -1,7 +1,7 @@
 package org.taichiserver.taichitweaks.mixins.restrictionPlacementOnNetherPortalSides;
 
 import com.llamalad7.mixinextras.sugar.Local;
-import fi.dy.masa.malilib.util.PositionUtils;
+import fi.dy.masa.malilib.util.position.PositionUtils;
 import fi.dy.masa.tweakeroo.tweaks.PlacementTweaks;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayerEntity;

@@ -34,7 +34,7 @@ public abstract class MinecraftClientMixin {
                     AutoVoidTrade.preTick++;
                     if(Configs.Generic.AUTO_VOID_TRADE_WAIT_TICK.getIntegerValue() >= AutoVoidTrade.preTick) return;
                     MerchantScreenHandler screenHandler = ((MerchantScreen) screen).getScreenHandler();
-                    if (!VillagerDataStorage.getInstance().getFavoritesForCurrentVillager(screenHandler).favorites.isEmpty()) {
+                    if (!VillagerDataStorage.getInstance().getFavoritesForCurrentVillager(screenHandler).favorites().isEmpty()) {
                     	InventoryUtils.villagerTradeEverythingPossibleWithAllFavoritedTrades();
                     	InfoUtils.printActionbarMessage("tweakermore.impl.autoVillagerTradeFavorites.triggered");
                     } else {

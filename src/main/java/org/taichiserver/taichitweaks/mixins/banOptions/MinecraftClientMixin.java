@@ -16,11 +16,11 @@ import org.spongepowered.asm.mixin.injection.At;
 import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.taichiserver.taichitweaks.features.BanOptions;
-import taichiCarpet.client.TaichiCarpetClient;
+//import taichiCarpet.client.TaichiCarpetClient;
 
 @Mixin(MinecraftClient.class)
 public abstract class MinecraftClientMixin {
-
+    /*
     @Shadow @Nullable public ClientPlayerEntity player;
     @Unique
     private int count = 0;
@@ -50,4 +50,5 @@ public abstract class MinecraftClientMixin {
             }
         }
     }
+    */
 }
