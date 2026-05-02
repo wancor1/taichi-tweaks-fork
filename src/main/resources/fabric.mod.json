@@ -33,7 +33,6 @@
     "minecraft": "${minecraft_version}",
     "litematica": "*",
     "tweakeroo": "*",
-    "tweakermore": "*",
-    "taichi-carpet": "*"
+    "tweakermore": "*"
   }
 }
